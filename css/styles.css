@@ -1,0 +1,218 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Varibles */
+:root {
+
+    /* Colors */
+    --color-primary: #584BE1;
+    --color-secondary: #2B2567;
+    --color-accent: #DD9D4B;
+    --color-body: #373737;
+    --color-bg: #F0F4FD;
+    --color-white: #fff;
+
+    /* Border Radius */
+    --rounded-normal: 12px;
+    --rounded-medium: 15px;
+
+    /* Fonts and Typography */
+    --body-font: 'Poppins', sans-serif;
+
+    --h3-font-size: 3.3rem;
+    --normal-font-size: 1.8rem;
+    --small-font-size: 1.6rem;
+
+    /* Font Weight */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* z index */
+    --z-tooltip: 7;
+}
+
+/* Typography */
+::selection {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* 62.5% of 16px = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    line-height: 1.5;
+    color: var(--color-body);
+    background: var(--color-bg);
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 5rem 2rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    place-items: center;
+    gap: 4rem 2rem;
+    height: 100vh;
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+    }
+}
+
+.card {
+    border-radius: var(--rounded-medium);
+    padding: 3.3rem 6rem;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, .06);
+    background: var(--color-white);
+}
+
+.card--secondary {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    box-shadow: -13px 13px 100px 0 rgba(0, 0, 0, .23);
+    z-index: var(--z-tooltip);
+}
+
+@media screen and (min-width: 1024px) {
+    .card--secondary {
+        transform: scale(1.03);
+        transition: 0.3s all ease-in-out;
+    }
+
+    .card--secondary:hover {
+        transform: scale(1.07);
+    }
+}
+
+.card__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.plan__image {
+    width: 150px;
+}
+
+.plan__name {
+    font-size: var(--h3-font-size);
+    color: var(--color-body);
+    margin: 1.7rem auto 2.8rem auto;
+}
+
+.card--secondary .plan__name {
+    color: var(--color-white);
+}
+
+.plan__price {
+    font-weight: var(--font-weight-bold);
+}
+
+.plan__price,
+.plan__billing-cycle {
+    font-size: var(--normal-font-size);
+    color: var(--color-primary);
+}
+
+.card--secondary .plan__price,
+.card--secondary .plan__billing-cycle {
+    color: var(--color-accent);
+}
+
+.plan__description {
+    display: block;
+    margin-top: 2.2rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-normal);
+}
+
+.plan__list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 3.5rem;
+}
+
+.plan__item {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-normal);
+    margin-bottom: 1rem;
+}
+
+.card--secondary .plan__item {
+    color: #C6C0FF;
+
+}
+
+.plan__tick {
+    margin-right: 2.8rem;
+    font-size: 2.4rem;
+    vertical-align: middle;
+    color: var(--color-primary);
+}
+
+.card--secondary .plan__tick {
+    color: var(--color-white);
+}
+
+.text--bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.card--secondary .text--bold {
+    color: var(--color-white);
+}
+
+.btn {
+    border-radius: var(--rounded-normal);
+    border: 0;
+    cursor: pointer;
+    display: block;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-normal);
+    margin: 0 auto;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    background: #6c63d6;
+}
+
+.btn--accent {
+    background: var(--color-accent);
+    font-weight: var(--font-weight-bold);
+    color: #503615;
+}
+
+.btn--accent:hover {
+    background: #d8a461;
+}
